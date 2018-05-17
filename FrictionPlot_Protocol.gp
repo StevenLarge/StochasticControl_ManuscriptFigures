@@ -15,7 +15,7 @@ set key off
 
 set logscale y
 set format y "10^{%T}"
-set xrange [0:2]
+set xrange [0:1]
 set yrange [0.1:1000]
 
 POS = "at graph 0.15,0.85 font 'Helvetica'"
@@ -96,29 +96,29 @@ set ytics format ""
 #set xtics ("0" 0 0,"π/2" 1.5707 0 ,"π" 3.14 0,"3π/2" 4.7123 0,"2π" 6.28 0)
 #set xtics ("0" 0 0, 0.25 1, "1/2" 0.5 0, 0.75 1, "1" 1 0)
 #set xtics ("0" 0 0, 0.5 1, "1" 1 0, 1.5 1, "2" 2 0)
-set xtics ("0" 0 0, 0.25 1, "1/2" 0.5 0, 0.75 1, "1" 1 0, 1.25 1, "3/2" 1.5 0, 1.75 1, "2" 2 0)
+set xtics ("0" 0 0, 0.125 1, "1/4" 0.25 0, 0.375 1, "1/2" 0.5 0, 0.625 1,"3/4" 0.75 0, "1" 1 0, 1.25 1, "3/2" 1.5 0, 1.75 1, "2" 2 0)
 set ytics (0.1 1, 0.2 1, 0.5 1, "10^0" 1 0, 2 1, 5 1, 10 0, 20 1, 50 1, "10^2" 100 0, 200 1, 500 1, 1000 0)
-plot "FrictionData_May11/FrictionMod_A4.dat" using 1:2 with line lt 1 lw 3.5 lc rgb "#045a8d", \
-	"FrictionData_May11/FrictionMod_A2.dat" using 1:2 with line lt 1 lw 3.5 lc rgb "#2b8cbe", \
-	"FrictionData_May11/FrictionMod_A1.dat" using 1:2 with line lt 1 lw 3.5 lc rgb "#74a9cf", \
-	"FrictionData_May11/FrictionMod_A05.dat" using 1:2 with line lt 1 lw 3.5 lc rgb "#a6bddb", \
-	"FrictionData_May11/FrictionMod_A0.dat" using 1:2 with line lt 1 lw 3.5 lc rgb "#d0d1e6"
+plot "FrictionData_May11/FrictionMod_A4.dat" using ($1/2):($2) with line lt 1 lw 3.5 lc rgb "#045a8d", \
+	"FrictionData_May11/FrictionMod_A2.dat" using ($1/2):($2) with line lt 1 lw 3.5 lc rgb "#2b8cbe", \
+	"FrictionData_May11/FrictionMod_A1.dat" using ($1/2):($2) with line lt 1 lw 3.5 lc rgb "#74a9cf", \
+	"FrictionData_May11/FrictionMod_A05.dat" using ($1/2):($2) with line lt 1 lw 3.5 lc rgb "#a6bddb", \
+	"FrictionData_May11/FrictionMod_A0.dat" using ($1/2):($2) with line lt 1 lw 3.5 lc rgb "#d0d1e6"
 
 @BMARGIN
 
 unset logscale y
 
 set xrange [0:1]
-set yrange [0:2]
+set yrange [0:1]
 set xtics format ""
 set ytics format ""
 set xtics ("0" 0 0, 0.125 1, "1/4" 0.25 0, 0.375 1 ,"1/2" 0.5 0, 0.625 1, "3/4" 0.75 0, 0.875 1, "1" 1 0)
-set ytics ("0" 0 0, 0.5 1, "1" 1 0, 1.5 1, "2" 2 0)
-plot "FrictionData_May11/Protocol_A4.dat" using 2:1 with line lt 1 lw 3.5 lc rgb "#045a8d", \
-	"FrictionData_May11/Protocol_A2.dat" using 2:1 with line lt 1 lw 3.5 lc rgb "#2b8cbe", \
-	"FrictionData_May11/Protocol_A1.dat" using 2:1 with line lt 1 lw 3.5 lc rgb "#74a9cf", \
-	"FrictionData_May11/Protocol_A05.dat" using 2:1 with line lt 1 lw 3.5 lc rgb "#a6bddb", \
-	"FrictionData_May11/Protocol_A0.dat" using 2:1 with line lt 1 lw 3.5 lc rgb "#d0d1e6"
+set ytics ("0" 0 0, 0.25 1, "1/2" 0.5 0, 0.75 1, "1" 1 0, 1.5 1, "2" 2 0)
+plot "FrictionData_May11/Protocol_A4.dat" using ($2):($1/2) with line lt 1 lw 3.5 lc rgb "#045a8d", \
+	"FrictionData_May11/Protocol_A2.dat" using ($2):($1/2) with line lt 1 lw 3.5 lc rgb "#2b8cbe", \
+	"FrictionData_May11/Protocol_A1.dat" using ($2):($1/2) with line lt 1 lw 3.5 lc rgb "#74a9cf", \
+	"FrictionData_May11/Protocol_A05.dat" using ($2):($1/2) with line lt 1 lw 3.5 lc rgb "#a6bddb", \
+	"FrictionData_May11/Protocol_A0.dat" using ($2):($1/2) with line lt 1 lw 3.5 lc rgb "#d0d1e6"
 
 unset multiplot
 
