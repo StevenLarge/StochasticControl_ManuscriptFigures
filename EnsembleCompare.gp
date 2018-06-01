@@ -31,21 +31,23 @@ set label 3 "Time t/τ" at screen 0.545,0.560 center font "Times-New-Roman, 17"
 set label 4 "Trap minimum λ/⟨Δλ_{tot}⟩" at screen 0.04,0.775 center rotate by 90 font "Times-New-Roman, 17"
 
 #set label 5 "⟨Δλ⟩/√⟨δ{/Times-New-Roman-Italic x}^2⟩ = 2" at screen 0.2415,0.470 center font "Times-New-Roman,15"
-set label 5 "⟨Δλ⟩^* = 2" at screen 0.2615,0.470 center font "Times-New-Roman,15"
-set label 6 "8" at screen 0.5445,0.470 center font "Times-New-Roman,15"
-set label 7 "32" at screen 0.8275,0.470 center font "Times-New-Roman,15"
+set label 5 "⟨Δλ⟩^* = 6" at screen 0.2615,0.470 center font "Times-New-Roman,15"
+set label 6 "24" at screen 0.5445,0.470 center font "Times-New-Roman,15"
+set label 7 "96" at screen 0.8275,0.470 center font "Times-New-Roman,15"
 
 #set label 8 "Brownian bridge" at screen 0.2415,0.970 center font "Times-New-Roman,15"
 #set label 8 "Constant velocity" at screen 0.2615,0.970 center font "Times-New-Roman,15"
-set label 8 "Zero-barrier ratchet" at screen 0.2615,0.970 center font "Times-New-Roman,15"
-set label 9 "Fixed distance" at screen 0.5445,0.970 center font "Times-New-Roman,15"
-set label 10 "Fixed duration" at screen 0.8275,0.970 center font "Times-New-Roman,15"
+#set label 8 "Zero-barrier periodic-potential" at screen 0.2615,0.970 center font "Times-New-Roman,12"
+set label 8 "βE^‡=0 periodic-potential" at screen 0.2615,0.970 center font "Times-New-Roman,14"
+set label 9 "Fixed distance" at screen 0.5445,0.970 center font "Times-New-Roman,14"
+set label 10 "Fixed duration" at screen 0.8275,0.970 center font "Times-New-Roman,14"
 
 #set label 11 "Brownian bridge" at screen 0.720,0.240 left font "Times-New-Roman,11"
 set label 11 "Fixed duration" at screen 0.740, 0.160 left font "Times-New-Roman,11"
 set label 12 "Fixed distance" at screen 0.740,0.200 left font "Times-New-Roman,11"
 #set label 13 "Constant velocity" at screen 0.740,0.240 left font "Times-New-Roman,11"
-set label 13 "Zero-barrier ratchet" at screen 0.740,0.240 left font "Times-New-Roman,11"
+#set label 13 "Zero-barrier periodic-potential" at screen 0.740,0.240 left font "Times-New-Roman,10"
+set label 13 "βE^‡=0 periodic-potential" at screen 0.740,0.240 left font "Times-New-Roman,11"
 
 #set label 14 "Approximation" at screen 0.425,0.400 left font "Times-New-Roman,11"
 
@@ -53,8 +55,8 @@ set label 13 "Zero-barrier ratchet" at screen 0.740,0.240 left font "Times-New-R
 
 #set arrow from screen 0.227,0.488 to screen 0.280,0.488 nohead lw 0.55 lc rgb "black"
 
-set label 16 "(a)" at screen 0.100,0.975 center font "Times-New-Roman, 15"
-set label 17 "(b)" at screen 0.100,0.475 center font "Times-New-Roman, 15"
+set label 16 "(a)" at screen 0.095,0.975 center font "Times-New-Roman, 15"
+set label 17 "(b)" at screen 0.095,0.475 center font "Times-New-Roman, 15"
 
 set object circle at screen 0.720,0.200 size scr 0.0075 fc rgb "#FF0000" fs transparent solid 0.8 noborder
 set object circle at screen 0.720,0.160 size scr 0.0075 fc rgb "#00FF00" lw 1.5 #fs transparent solid 0.8 noborder
